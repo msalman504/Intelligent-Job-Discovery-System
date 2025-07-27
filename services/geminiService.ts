@@ -10,7 +10,7 @@ export const isGeminiApiKeyConfigured = !!API_KEY;
 
 let ai: GoogleGenAI | null = null;
 if (isGeminiApiKeyConfigured) {
-    ai = new GoogleGenAI({ apiKey: "AIzaSyD-XmexCESYmuW6v3XTkSJZHqsIhsKayZU" });
+    ai = new GoogleGenAI({ apiKey: API_KEY });
 }
 
 const checkAiInitialized = () => {
