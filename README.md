@@ -46,7 +46,7 @@ You will need API keys for the following services:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/intelligent-job-discovery.git
+    git clone https://github.com/msalman504/Intelligent-Job-Discovery-System.git
     cd intelligent-job-discovery
     ```
 
