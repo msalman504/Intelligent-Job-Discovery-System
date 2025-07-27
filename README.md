@@ -5,7 +5,8 @@ An intelligent job discovery agent that uses Google Gemini to score opportunitie
 
 This advanced dashboard allows users to discover, monitor, and analyze job opportunities using AI-powered search, personalized resume matching, and dynamic market intelligence.
 
-![App Screenshot](https://drive.google.com/file/d/1ogPlwj148fbEhY8_xV2oFDsELPLR4gRq/view?usp=sharing)
+![App Screenshot](![App Screenshot](https://drive.google.com/uc?export=view&id=1ogPlwj148fbEhY8_xV2oFDsELPLR4gRq)
+
 
 ---
 
