@@ -3,10 +3,10 @@
 
 An intelligent job discovery agent that uses Google Gemini to score opportunities against your resume and deliver deep market analysis.
 
-This advanced dashboard allows users to discover, monitor, and analyze job opportunities using AI-powered search, personalized resume matching, and dynamic market intelligence.
+This advanced vibe coded dashboard allows users to discover, monitor, and analyze job opportunities using AI-powered search, personalized resume matching, and dynamic market intelligence.
 
-![App Screenshot](https://storage.googleapis.com/project-screenshots/intelligent-job-discovery/screenshot.png)
-*(Note: Replace the URL above with a real screenshot of your application.)*
+![App Screenshot](https://drive.google.com/uc?export=view&id=1ogPlwj148fbEhY8_xV2oFDsELPLR4gRq)
+
 
 ---
 
@@ -46,7 +46,7 @@ You will need API keys for the following services:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/intelligent-job-discovery.git
+    git clone https://github.com/msalman504/Intelligent-Job-Discovery-System.git
     cd intelligent-job-discovery
     ```
 
