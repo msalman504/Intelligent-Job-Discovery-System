@@ -3,9 +3,9 @@ import { Job } from '../types';
 
 // IMPORTANT: Replace "YOUR_JSEARCH_API_KEY_HERE" with your own key from RapidAPI.
 // Get a key by subscribing to the API on https://rapidapi.com/apidojo/api/jsearch
-const JSEARCH_API_KEY = 'dc07b1cc72msh98ba0366072e82ap19397ajsn93fd91327e49';
+const JSEARCH_API_KEY = process.env.JSEARCH_API_KEY;
 
-export const isJsearchApiKeyConfigured = !!JSEARCH_API_KEY;
+    export const isJsearchApiKeyConfigured = !!JSEARCH_API_KEY;
 
 const JSEARCH_API_URL = 'https://jsearch.p.rapidapi.com/search';
 

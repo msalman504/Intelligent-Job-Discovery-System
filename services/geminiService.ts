@@ -4,13 +4,13 @@ import { Job, JobAnalysis, ResumeAnalysis } from '../types';
 
 // IMPORTANT: Replace "YOUR_GEMINI_API_KEY_HERE" with your actual Google Gemini API key.
 // You can get a key from Google AI Studio: https://aistudio.google.com/app/apikey
-const API_KEY = PASTE_GEMINI_API_KEY;
+const API_KEY = "AIzaSyD-XmexCESYmuW6v3XTkSJZHqsIhsKayZU";
 
 export const isGeminiApiKeyConfigured = !!API_KEY;
 
 let ai: GoogleGenAI | null = null;
 if (isGeminiApiKeyConfigured) {
-    ai = new GoogleGenAI({ apiKey: "AIzaSyD-XmexCESYmuW6v3XTkSJZHqsIhsKayZU" });
+    ai = new GoogleGenAI({ apiKey: API_KEY });
 }
 
 const checkAiInitialized = () => {
