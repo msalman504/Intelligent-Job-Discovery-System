@@ -1,0 +1,56 @@
+# Name of the workflow
+name: Deploy Vite Project to GitHub Pages
+
+# Run this workflow every time a push is made to the 'main' branch
+on:
+  push:
+    branches:
+      - main
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # This job builds the project
+  build:
+    runs-on: ubuntu-latest
+    # ADD THIS LINE to give the build job access to your environment secrets
+    environment: github-pages
+    steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+        env:
+          # This will now correctly find the secrets from the github-pages environment
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
+
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+  # This job deploys the project (it already had the correct environment)
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
